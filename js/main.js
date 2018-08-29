@@ -1,3 +1,4 @@
+var setValue = [0, 0, 0];
 
 function findDay() {
     var d = new Date();
@@ -13,16 +14,18 @@ function findDay() {
     var n = weekday[d.getDay()];
     console.log(n);
     findMessage(n);
-    drawChart();
-  
+
+
 }
 
-function findMessage(day){
-    if(day=="Monday" || day=="Wednesday"){
-        $("#message").text("It's just "+day+" long way to go pal");
+function findMessage(day) {
+    if (day == "Monday" || day == "Wednesday") {
+        $("#message").text("It's just " + day + " long way to go pal");
+        setValue = new Array(400, 700, 625);
+        console.log(setValue);
+        drawChart();
     }
-    else 
-    {
+    else {
         $("#message").text("i shat myself");
 
     }
@@ -30,77 +33,73 @@ function findMessage(day){
 
 
 
-$(document).ready(function () 
-
-{
+$(document).ready(function () {
     $("#homePage").hide();
 
     console.log("Jquery works");
     $("#login").click(function () {
         event.preventDefault();
         if ($("#uname").val() == '1' && $("#pwd").val() == '1') {
-            
-            $("#displayName").text("Welcome "+ $("#uname").val());
+
+            $("#displayName").text("Welcome " + $("#uname").val());
             $("#loginPage").fadeOut(700);
             $("#homePage").fadeIn(1000);
             findDay();
-                       
-            }
+
+        }
         else {
             alert("Please try again");
         }
-        $("#logout").click(function () { 
-           $("form")[0].reset();
+        $("#logout").click(function () {
+            $("form")[0].reset();
             $("#loginPage").fadeIn(1000);
-           $("#homePage").fadeOut(700);
-            
+            $("#homePage").fadeOut(700);
+
         });
     });
 });
 
 
-function dataValue(a,b,c){
-    var dataValue=[a,b,c];
-}
 
-function drawChart(){
+
+function drawChart() {
     var ctx = document.getElementById("myChart");
 
-var data = {
-    labels: [
-        "Red",
-        "Blue",
-        "Yellow"
-    ],
-    datasets: [
-        {
-            data: [300, 5000, 100],
-            backgroundColor: [
-                "#FF6384",
-                "#36A2EB",
-                "#FFCE56"
-            ],
-            hoverBackgroundColor: [
-                "#FF4394",
-                "#36A2EB",
-                "#FFCE56"
-            ]
-						
-						
-        }]
-};
-
-var options = { 
-	cutoutPercentage:50,
-};
+    var dataConfig = {
+        labels: [
+            "Red",
+            "Blue",
+            "Yellow"
+        ],
+        datasets: [
+            {
+                data: [setValue[0], setValue[1], setValue[2]],
+                backgroundColor: [
+                    "#FF6384",
+                    "#36A2EB",
+                    "#FFCE56"
+                ],
+                hoverBackgroundColor: [
+                    "#FF4394",
+                    "#36A2EB",
+                    "#FFCE56"
+                ]
 
 
-var myDoughnutChart = new Chart(ctx, {
-    type: 'doughnut',
-    data: data,
-    options: options,
-    
-});
+            }]
+    };
+
+    var options = {
+        cutoutPercentage: 50,
+    };
+
+
+    var myDoughnutChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: dataConfig,
+        options: options,
+
+    });
 }
 
 /* 
