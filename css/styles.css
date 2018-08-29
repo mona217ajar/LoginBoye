@@ -1,1 +1,58 @@
 /* heysude */
+body,html,div{
+    height:100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+div#left1{
+    /* position: absolute; */
+    display: inline-block;
+    float: left;
+    background-color: aqua;
+    width: 30%;
+
+    text-align: center;
+
+}
+div#right1{
+    display: inline-block;
+    float: right;
+    background-color:red;
+    width: 70%;
+  
+}
+
+/* div#loginBox{
+    position: relative;
+    background-color: blueviolet;
+    margin: 20px;
+}
+
+form{
+    float:center;
+    display: inline-block;
+    margin: 50% 0;
+    transform: translateY(50%);
+    background-color: #fff;
+    
+   } */
+   div#loginBox{
+    float:center;
+    display: inline-block;
+    margin: 50% 0;
+    transform: translateY(50%);
+    background-color: #fff;
+    height: 200px;
+}
+form input{
+    height: 25px;
+    background-color: rgb(243, 243, 0);
+    border-radius: 5px;
+    
+}
+form ::-webkit-input-placeholder{
+    padding-left: 10px;
+}

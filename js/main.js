@@ -35,6 +35,7 @@ function findMessage(day) {
 
 $(document).ready(function () {
     $("#homePage").hide();
+    $("#invalidID").hide();
 
     console.log("Jquery works");
     $("#login").click(function () {
@@ -48,10 +49,15 @@ $(document).ready(function () {
 
         }
         else {
-            alert("Please try again");
+            // alert("Please try again");
+            $("#pwd").effect("shake", { times:3 }, 300);
+            $("form")[0].reset();
+            $("#invalidID").fadeIn(300);
+            
         }
         $("#logout").click(function () {
             $("form")[0].reset();
+            $("#invalidID").hide();
             $("#loginPage").fadeIn(1000);
             $("#homePage").fadeOut(700);
 
