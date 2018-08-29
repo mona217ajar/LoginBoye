@@ -38,9 +38,10 @@ $(document).ready(function ()
     $("#login").click(function () {
         event.preventDefault();
         if ($("#uname").val() == '1' && $("#pwd").val() == '1') {
-/*            
- */         $("#loginPage").fadeOut(500);
-            $("#homePage").fadeIn(600);
+            
+            $("#displayName").text("Welcome "+ $("#uname").val());
+            $("#loginPage").fadeOut(700);
+            $("#homePage").fadeIn(1000);
             findDay();
                        
             }
@@ -49,8 +50,8 @@ $(document).ready(function ()
         }
         $("#logout").click(function () { 
            $("form")[0].reset();
-            $("#loginPage").show();
-           $("#homePage").hide();
+            $("#loginPage").fadeIn(1000);
+           $("#homePage").fadeOut(700);
             
         });
     });
