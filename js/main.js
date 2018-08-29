@@ -17,13 +17,16 @@ function findDay() {
 
 function findMessage(day) {
     if (day == "Monday" || day == "Wednesday") {
-        $("#message").text("It's just " + day + " long way to go pal");
-        setValue = new Array(400, 700, 625);
+        event.preventDefault();
+        $("#message").text("It's just " + day + ", long way to go pal");
+        setValue = new Array(20, 700, 625);
         console.log(setValue);
-        drawChart();
+        setTimeout(drawChart,500);
     }
     else {
         $("#message").text("i shat myself");
+        event.preventDefault();
+
 
     }
 }
@@ -33,35 +36,48 @@ function findMessage(day) {
 $(document).ready(function () {
     $("#homePage").hide();
     $("#invalidID").hide();
+    $("#bye").hide();
 
     console.log("Jquery works");
     $("#login").click(function () {
         event.preventDefault();
-        if ($("#uname").val() == '1' && $("#pwd").val() == '1') {
+        if ($("#uname").val() == 'hrishi' && $("#pwd").val() == 'poop') {
 
             $("#displayName").text("Welcome " + $("#uname").val());
-            $("#loginPage").fadeOut(50);
-            $("#homePage").fadeIn(200);
+            $("#loginPage").fadeOut(300);
+            $("#homePage").fadeIn(800);
             findDay();
 
         }
         else {
             // alert("Please try again");
-            $("#pwd").effect("shake", { times:3 }, 300);
+            $("#pwd").effect("shake", { times:3 }, 500);
             $("form")[0].reset();
             $("#invalidID").fadeIn(300);
             
+            
         }
         $("#logout").click(function () {
-            $("form")[0].reset();
-            $("#invalidID").hide();
-            $("#loginPage").fadeIn(200 );
-            $("#homePage").fadeOut(50);
+            $("#loginPage").hide(600);
+            $("#homePage").fadeOut(300);
+            $("#bye").fadeIn();
+            console.log("black skie");
+            setTimeout(byeScreen,1500);
+
+        
 
         });
     });
 });
 
+function byeScreen(){
+    $("#bye").fadeOut(1000);
+    $("#homePage").hide();
+    $("form")[0].reset();
+    $("#invalidID").hide();
+    $("#loginPage").fadeIn(600);
+    $("#homePage").fadeOut(300);
+}
 
 
 
@@ -70,22 +86,22 @@ function drawChart() {
 
     var dataConfig = {
         labels: [
-            "Red",
-            "Blue",
-            "Yellow"
+            "Optimism",
+            "Anxiety",
+            "Tired"
         ],
         datasets: [
             {
                 data: [setValue[0], setValue[1], setValue[2]],
                 backgroundColor: [
-                    "#FF6384",
-                    "#36A2EB",
-                    "#FFCE56"
+                    "#FFC255",
+                    "#F6A296",
+                    "#CA5EAF"
                 ],
                 hoverBackgroundColor: [
-                    "#FF4394",
-                    "#36A2EB",
-                    "#FFCE56"
+                    "#FFC255",
+                    "#F6A296",
+                    "#CA5EAF"
                 ]
 
 
