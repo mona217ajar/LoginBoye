@@ -36,31 +36,6 @@ div#right1{
   margin: 0;
 }
 
-/* div#loginBox{
-    position: relative;
-    background-color: blueviolet;
-    margin: 20px;
-}
-
-form{
-    float:center;
-    display: inline-block;
-    margin: 50% 0;
-    transform: translateY(50%);
-    background-color: #fff;
-    
-   } */
-/*    div#loginBox{
-   
-    position: relative;;
-    display: inline-block;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #fff;
-    max-height: 300px;
-    
-} */
-
 form{
     position: relative;
     float:center;
@@ -89,4 +64,47 @@ div#welcomeText{
     transform: translateY(-50%);
     background-color: #fff;
     height: 200px;
+}
+
+/* PAGE TWO STYLESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS */
+
+
+
+div#left2{
+    /* position: absolute; */
+    display: inline-block;
+    float: left;
+    background-color: aqua;
+    width: 30%;
+    text-align: center;
+    height: 100%;
+    margin: 0;
+
+}
+div#right2{
+    display: inline-block;
+    float: right;
+    background-color:red;
+    width: 70%;
+    height: 100%;
+  margin: 0;
+}
+
+div#messageName{
+    position: relative;
+    float:center;
+    display: inline-block;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    height: 200px;
+}
+div#messageDiv{
+    position: relative;
+    float:center;
+    display: inline-block;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    height: auto;
 }

@@ -13,24 +13,24 @@
 <body>
     <div id="loginPage">
         <div id="left1">
-           
-        <form action="" method="POST">
-            <h1>day</h1>
-          
-            <label for="username"> Username</label>
-            <br>
-            <input type="text" id="uname" placeholder="Username">
-            <br>
-            <label for="password">Password</label>
-            <br>
-            <input type="password" id="pwd" placeholder="Password">
-            <br>
-            <label id="invalidID">Invalid Credentials</label>
-            <br>
-            <button type="submit" id="login">Login</button>
-       
-        </form>
-    
+
+            <form action="" method="POST">
+                <h1>day</h1>
+
+                <label for="username"> Username</label>
+                <br>
+                <input type="text" id="uname" placeholder="Username">
+                <br>
+                <label for="password">Password</label>
+                <br>
+                <input type="password" id="pwd" placeholder="Password">
+                <br>
+                <label id="invalidID">Invalid Credentials</label>
+                <br>
+                <button type="submit" id="login">Login</button>
+
+            </form>
+
         </div>
         <div id="right1">
             <div id="welcomeText">
@@ -42,20 +42,24 @@
     </div>
     <div id="homePage">
         <div id="left2">
-            <h1 id="displayName"></h1>
-                
-        <button type="submit" id="logout">Logout</button>
+            <div id="messageName">
+                <h1 id="displayName"></h1>
+
+                <button type="submit" id="logout">Logout</button>
+            </div>
         </div>
 
         <div id="right2">
+            <div id="messageDiv">
                 <h2 id="message"></h2>
                 <canvas id="myChart"></canvas>
+            </div>
         </div>
 
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/jquery-ui.js"></script>
-    <script src="js/Chart.js"></script>
-    <script src="js/main.js"></script>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/jquery-ui.js"></script>
+        <script src="js/Chart.js"></script>
+        <script src="js/main.js"></script>
 </body>
 
 </html>

@@ -42,8 +42,8 @@ $(document).ready(function () {
         if ($("#uname").val() == '1' && $("#pwd").val() == '1') {
 
             $("#displayName").text("Welcome " + $("#uname").val());
-            $("#loginPage").fadeOut(700);
-            $("#homePage").fadeIn(1000);
+            $("#loginPage").fadeOut(50);
+            $("#homePage").fadeIn(200);
             findDay();
 
         }
@@ -57,8 +57,8 @@ $(document).ready(function () {
         $("#logout").click(function () {
             $("form")[0].reset();
             $("#invalidID").hide();
-            $("#loginPage").fadeIn(1000);
-            $("#homePage").fadeOut(700);
+            $("#loginPage").fadeIn(200 );
+            $("#homePage").fadeOut(50);
 
         });
     });
@@ -107,17 +107,3 @@ function drawChart() {
     });
 }
 
-/* 
-console.log("whattup dawg i work");
-
-function loginCheck(form){
-    console.log("login bouisss");
-    if(form.uname.value=="hrishi" && form.pwd.value=="1234")
-    {
-        console.log("Validated");
-        
-    }
-    else{
-        alert("eat shit dickhead")
-    }
-} */
