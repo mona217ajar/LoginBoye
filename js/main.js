@@ -13,14 +13,15 @@ function findDay() {
     var n = weekday[d.getDay()];
     console.log(n);
     findMessage(n);
+    drawChart();
   
 }
 
 function findMessage(day){
-    if(day=="Wednesday"){
-        $("#message").text("today is wednesdy bruh");
+    if(day=="Monday" || day=="Wednesday"){
+        $("#message").text("It's just "+day+" long way to go pal");
     }
-    else
+    else 
     {
         $("#message").text("i shat myself");
 
@@ -56,6 +57,51 @@ $(document).ready(function ()
         });
     });
 });
+
+
+function dataValue(a,b,c){
+    var dataValue=[a,b,c];
+}
+
+function drawChart(){
+    var ctx = document.getElementById("myChart");
+
+var data = {
+    labels: [
+        "Red",
+        "Blue",
+        "Yellow"
+    ],
+    datasets: [
+        {
+            data: [300, 5000, 100],
+            backgroundColor: [
+                "#FF6384",
+                "#36A2EB",
+                "#FFCE56"
+            ],
+            hoverBackgroundColor: [
+                "#FF4394",
+                "#36A2EB",
+                "#FFCE56"
+            ]
+						
+						
+        }]
+};
+
+var options = { 
+	cutoutPercentage:50,
+};
+
+
+var myDoughnutChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: data,
+    options: options,
+    
+});
+}
 
 /* 
 console.log("whattup dawg i work");
