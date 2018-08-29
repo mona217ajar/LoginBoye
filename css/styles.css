@@ -3,7 +3,6 @@ body,html,div{
     height:100%;
     width: 100%;
     margin: 0;
-    padding: 0;
     display: inline-block;
 }
 
@@ -11,7 +10,7 @@ body {
     padding-bottom: 0px;
 }
 
-h1{
+h1,h2{
     margin: 0;
     padding: 0;
 }
@@ -66,9 +65,18 @@ div#welcomeText{
     height: 200px;
 }
 
-/* PAGE TWO STYLESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS */
 
+/* 
+_                 
+| |                
+_ __   __ _  __ _  ___  | |___      _____  
+| '_ \ / _` |/ _` |/ _ \ | __\ \ /\ / / _ \ 
+| |_) | (_| | (_| |  __/ | |_ \ V  V / (_) |
+| .__/ \__,_|\__, |\___|  \__| \_/\_/ \___/ 
+| |           __/ |                         
+|_|          |___/                          
 
+ */
 
 div#left2{
     /* position: absolute; */
@@ -79,6 +87,8 @@ div#left2{
     text-align: center;
     height: 100%;
     margin: 0;
+    padding: 0;
+    /* padding: 20px; */
 
 }
 div#right2{
@@ -88,6 +98,8 @@ div#right2{
     width: 70%;
     height: 100%;
   margin: 0;
+  padding: 0;
+
 }
 
 div#messageName{
@@ -95,16 +107,24 @@ div#messageName{
     float:center;
     display: inline-block;
     top: 50%;
-    transform: translateY(-50%);
+    width: 100%;
+        transform: translateY(-50%);
     background-color: #fff;
     height: 200px;
+    /* margin: 10px; */
 }
 div#messageDiv{
     position: relative;
     float:center;
     display: inline-block;
     top: 50%;
-    transform: translateY(-50%);
+   transform: translateY(-50%);
     background-color: #fff;
     height: auto;
+     
+}
+
+canvas#myChart{
+    max-width: 500px;
+    
 }

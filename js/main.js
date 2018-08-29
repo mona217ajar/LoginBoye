@@ -13,8 +13,6 @@ function findDay() {
     var n = weekday[d.getDay()];
     console.log(n);
     findMessage(n);
-
-
 }
 
 function findMessage(day) {
