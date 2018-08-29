@@ -1,9 +1,15 @@
 /* heysude */
+
+/* 
+font-family: 'IBM Plex Sans', sans-serif;
+font-family: 'Open Sans', sans-serif;
+*/
 body,html,div{
     height:100%;
     width: 100%;
     margin: 0;
     display: inline-block;
+    font-family: 'Open Sans', sans-serif
 }
 
 body {
@@ -13,17 +19,38 @@ body {
 h1,h2{
     margin: 0;
     padding: 0;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight:700;
+    font-size: 30px;
+
 }
+h1{
+    max-width: 170px;
+    float: left;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+
+
+label{
+    float: left;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+
 
 div#left1{
     /* position: absolute; */
     display: inline-block;
     float: left;
-    background-color: aqua;
+    /* background-color: aqua; */
     width: 30%;
     text-align: center;
     height: 100%;
     margin: 0;
+    
 
 }
 div#right1{
@@ -43,16 +70,55 @@ form{
     transform: translateY(-50%);
     background-color: #fff;
     height: 200px;
+    padding: 0 20px;
  }
 
 form input{
     height: 25px;
-    background-color: rgb(243, 243, 0);
-    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.041);
+    /* border-radius: 5px; */
+    /* padding: 10px; */
+    /* margin: 10px; */
+    /* box-shadow: 0px 0px 4px #00000036;
+    border-style: solid;   
+    border-width: 0.5px;
+    border-color: white  */
+    outline: 0;
+    border-width: 0 0 1px;
+    border-color: blue;
+    padding: 0px;
+   margin: 0px;   
     
 }
+
+form input:focus {
+    border-color: green;
+    box-shadow: 0px 1px 2px rgba(0, 128, 0, 0.253);
+  }
+
 form ::-webkit-input-placeholder{
     padding-left: 10px;
+    font-size: 14px;
+    opacity: 0.5;
+}
+
+label{
+    font-size: 12px;
+    color: red;
+    float:left;
+    padding: 0px;
+    margin: 10px 0;
+    
+}
+
+button{
+ background:blue ;
+ border: none;
+ width: 170px;
+ height: 30px;
+border-radius: 15px;
+font-size: 17px;
+color: #fff;
 }
 
 div#welcomeText{
