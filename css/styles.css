@@ -7,14 +7,24 @@ body,html,div{
     display: inline-block;
 }
 
+body {
+    padding-bottom: 0px;
+}
+
+h1{
+    margin: 0;
+    padding: 0;
+}
+
 div#left1{
     /* position: absolute; */
     display: inline-block;
     float: left;
     background-color: aqua;
     width: 30%;
-
     text-align: center;
+    height: 100%;
+    margin: 0;
 
 }
 div#right1{
@@ -22,7 +32,8 @@ div#right1{
     float: right;
     background-color:red;
     width: 70%;
-  
+    height: 100%;
+  margin: 0;
 }
 
 /* div#loginBox{
@@ -39,14 +50,27 @@ form{
     background-color: #fff;
     
    } */
-   div#loginBox{
+/*    div#loginBox{
+   
+    position: relative;;
+    display: inline-block;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    max-height: 300px;
+    
+} */
+
+form{
+    position: relative;
     float:center;
     display: inline-block;
-    margin: 50% 0;
-    transform: translateY(50%);
+    top: 50%;
+    transform: translateY(-50%);
     background-color: #fff;
     height: 200px;
-}
+ }
+
 form input{
     height: 25px;
     background-color: rgb(243, 243, 0);
@@ -55,4 +79,14 @@ form input{
 }
 form ::-webkit-input-placeholder{
     padding-left: 10px;
+}
+
+div#welcomeText{
+    position: relative;
+    float:center;
+    display: inline-block;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    height: 200px;
 }
