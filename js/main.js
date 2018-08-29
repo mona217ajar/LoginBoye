@@ -1,18 +1,25 @@
 
 
-$(document).ready(function(){
+$(document).ready(function () 
 
-console.log("Jquery works");
-$("#login").click(function(){
-    if( $("#uname").val()=='admin' && $("#pwd").val()=='password') {
+{
+    $("#homePage").hide();
+    console.log("Jquery works");
+    $("#login").click(function () {
+        event.preventDefault();
+        if ($("#uname").val() == 'admin' && $("#pwd").val() == 'password') {
 /*             $("#first").hide();
             $("#second").append("<p>Hello, admin</p> <br/><input type='button' id='logout' value='Log Out' />");
- */        }
-    else {
-        alert("Please try again");
-    }
+            
+ */         $("#loginPage").hide(500);
+            $("#homePage").show(1000);
+            }
+        else {
+            alert("Please try again");
+        }
+    });
+});
 
-})
 /* 
 console.log("whattup dawg i work");
 
