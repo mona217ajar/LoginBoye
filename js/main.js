@@ -1,22 +1,58 @@
 
+function findDay() {
+    var d = new Date();
+    var weekday = new Array(7);
+    weekday[0] = "Sunday";
+    weekday[1] = "Monday";
+    weekday[2] = "Tuesday";
+    weekday[3] = "Wednesday";
+    weekday[4] = "Thursday";
+    weekday[5] = "Friday";
+    weekday[6] = "Saturday";
+
+    var n = weekday[d.getDay()];
+    console.log(n);
+    findMessage(n);
+  
+}
+
+function findMessage(day){
+    if(day=="Wednesday"){
+        $("#message").text("today is wednesdy bruh");
+    }
+    else
+    {
+        $("#message").text("i shat myself");
+
+    }
+}
+
+
 
 $(document).ready(function () 
 
 {
     $("#homePage").hide();
+
     console.log("Jquery works");
     $("#login").click(function () {
         event.preventDefault();
-        if ($("#uname").val() == 'admin' && $("#pwd").val() == 'password') {
-/*             $("#first").hide();
-            $("#second").append("<p>Hello, admin</p> <br/><input type='button' id='logout' value='Log Out' />");
-            
- */         $("#loginPage").hide(500);
-            $("#homePage").show(1000);
+        if ($("#uname").val() == '1' && $("#pwd").val() == '1') {
+/*            
+ */         $("#loginPage").fadeOut(500);
+            $("#homePage").fadeIn(600);
+            findDay();
+                       
             }
         else {
             alert("Please try again");
         }
+        $("#logout").click(function () { 
+           $("form")[0].reset();
+            $("#loginPage").show();
+           $("#homePage").hide();
+            
+        });
     });
 });
 
